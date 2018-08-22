@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>selfhelpmanagersecure.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Script.v1" Version="1.35.1.1323" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Google App Script Manager\AppScriptManager.csproj" />
+  </ItemGroup>
+
+</Project>
