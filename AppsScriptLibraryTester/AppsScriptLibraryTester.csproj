@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Google App Script Manager\AppScriptManager.csproj" />
+    <ProjectReference Include="..\AppsScriptManager\AppsScriptManager.csproj" />
   </ItemGroup>
 
 </Project>

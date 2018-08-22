@@ -1,4 +1,4 @@
-﻿using AppScriptManager;
+﻿using AppsScriptManager;
 using System;
 using System.IO;
 
@@ -142,11 +142,11 @@ namespace SourceEditorClient
                         version = getIntInput();
                         if (version != null)
                         {
-                            AppScriptSourceCodeManager.FILE_TYPES? f = null;
+                            AppsScriptSourceCodeManager.FILE_TYPES? f = null;
                             if (version == 1)
-                                f = AppScriptSourceCodeManager.FILE_TYPES.SERVER_JS;
+                                f = AppsScriptSourceCodeManager.FILE_TYPES.SERVER_JS;
                             else if (version == 2)
-                                f = AppScriptSourceCodeManager.FILE_TYPES.HTML;
+                                f = AppsScriptSourceCodeManager.FILE_TYPES.HTML;
                             else if (version == 3)
                                 PrintCentered("Please use create manifest to generate an appsscript.json file");
 

@@ -13,7 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using static Google.Apis.Script.v1.ProjectsResource;
 
-namespace AppScriptManager
+namespace AppsScriptManager
 {
     /// <summary>
     /// This library is intended for use with the attached Source Editor Client appliation.
@@ -25,7 +25,7 @@ namespace AppScriptManager
     /// You may find this here:
     /// https://docs.google.com/document/d/1TiT9CXUkvVxP8DQyyVfhkz1adzftrbIYvWgYzScaQ8U/edit?usp=sharing
     /// </summary>
-    public static partial class AppScriptSourceCodeManager
+    public static partial class AppsScriptSourceCodeManager
     {
         /// <summary>
         /// The Google API Scopes this application needs to authorize.

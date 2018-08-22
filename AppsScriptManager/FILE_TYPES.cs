@@ -1,8 +1,8 @@
 ﻿using System.IO;
 
-namespace AppScriptManager
+namespace AppsScriptManager
 {
-    public static partial class AppScriptSourceCodeManager
+    public static partial class AppsScriptSourceCodeManager
     {
         /// <summary>
         /// Denotes all usabled file types by Google Apps Script

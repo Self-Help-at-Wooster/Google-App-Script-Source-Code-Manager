@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace AppScriptManager
+﻿namespace AppsScriptManager
 {
-    public static partial class AppScriptSourceCodeManager
+    public static partial class AppsScriptSourceCodeManager
     {
         /// <summary>
         /// Maintains information about Tasks.

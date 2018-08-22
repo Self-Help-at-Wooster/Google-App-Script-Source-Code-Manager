@@ -2,9 +2,9 @@
 using System.Diagnostics;
 using System.Text;
 
-namespace AppScriptManager
+namespace AppsScriptManager
 {
-    public static partial class AppScriptSourceCodeManager
+    public static partial class AppsScriptSourceCodeManager
     {
         /// <summary>
         /// Local exception class for errors emanating from within specific library.

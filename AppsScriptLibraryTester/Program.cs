@@ -1,4 +1,4 @@
-﻿using AppScriptManager;
+﻿using AppsScriptManager;
 using System;
 using System.IO;
 
@@ -9,7 +9,7 @@ namespace LibraryTester
 
         private static void Main(string[] args)
         {
-            var info = AppScriptSourceCodeManager.Initialize(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName).Result;
+            var info = AppsScriptSourceCodeManager.Initialize(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName).Result;
             Console.WriteLine(info.MyResult);
 
             if (info.IsSuccess)
@@ -17,9 +17,9 @@ namespace LibraryTester
                 try
                 {
                     Console.WriteLine("Please wait... Creating a new Google App Script Project!");
-                    AppScriptSourceCodeManager.CreateNewGASProject("Library Test Demo").Wait();
+                    AppsScriptSourceCodeManager.CreateNewGASProject("Library Test Demo").Wait();
                 }
-                catch (AppScriptSourceCodeManager.InfoException ex)
+                catch (AppsScriptSourceCodeManager.InfoException ex)
                 {
                     Console.WriteLine(ex);
 
@@ -27,7 +27,7 @@ namespace LibraryTester
 
                 Console.ReadLine();
 
-                foreach (var str in AppScriptSourceCodeManager.GetScriptInfo())
+                foreach (var str in AppsScriptSourceCodeManager.GetScriptInfo())
                 {
                     Console.WriteLine(str);
                 }

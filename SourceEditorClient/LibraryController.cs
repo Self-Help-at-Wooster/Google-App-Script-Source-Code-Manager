@@ -1,4 +1,4 @@
-﻿using AppScriptManager;
+﻿using AppsScriptManager;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -42,7 +42,7 @@ namespace SourceEditorClient
         {
             if (AutoSync && watchers == null)
             {
-                watchers = AppScriptSourceCodeManager.GetWatchers();
+                watchers = AppsScriptSourceCodeManager.GetWatchers();
 
                 watchers?.ForEach(fw =>
                 {
@@ -56,7 +56,7 @@ namespace SourceEditorClient
 
         public static void SetHTMLScriptParse()
         {
-            AppScriptSourceCodeManager.ParseHTMLScriptTagToJS = ParseScriptTag;
+            AppsScriptSourceCodeManager.ParseHTMLScriptTagToJS = ParseScriptTag;
         }
 
 
@@ -114,7 +114,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.Initialize(SourceCode).Result;
+                var res = AppsScriptSourceCodeManager.Initialize(SourceCode).Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
                 DisplayInfo();
             }
@@ -128,7 +128,7 @@ namespace SourceEditorClient
         {
             try
             {
-                foreach (string str in AppScriptSourceCodeManager.GetScriptInfo())
+                foreach (string str in AppsScriptSourceCodeManager.GetScriptInfo())
                     PrintCentered(str);
             }
             catch (Exception ex) { Debug.WriteLine(ex); }
@@ -138,10 +138,10 @@ namespace SourceEditorClient
         {
             try
             {
-                AppScriptSourceCodeManager.ScriptID = ID;
+                AppsScriptSourceCodeManager.ScriptID = ID;
                 PrintCentered("Success!");
             }
-            catch (AppScriptSourceCodeManager.InfoException ex)
+            catch (AppsScriptSourceCodeManager.InfoException ex)
             {
                 PrintAgain = false;
                 PrintErrorCentered(ex.Message);
@@ -152,7 +152,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.CreateNewGASProject(Name).Result;
+                var res = AppsScriptSourceCodeManager.CreateNewGASProject(Name).Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
             }
             catch (Exception ex)
@@ -165,7 +165,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.DownloadFiles().Result;
+                var res = AppsScriptSourceCodeManager.DownloadFiles().Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
             }
             catch (Exception ex)
@@ -178,7 +178,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.DownloadFiles(VersionNumber).Result;
+                var res = AppsScriptSourceCodeManager.DownloadFiles(VersionNumber).Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
             }
             catch (Exception ex)
@@ -191,7 +191,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.SyncChanges().Result;
+                var res = AppsScriptSourceCodeManager.SyncChanges().Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
                 return res.IsSuccess;
             }
@@ -206,7 +206,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.PreVersionAndSyncChanges().Result;
+                var res = AppsScriptSourceCodeManager.PreVersionAndSyncChanges().Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
                 return res.IsSuccess;
             }
@@ -217,11 +217,11 @@ namespace SourceEditorClient
             }
         }
 
-        public static void CreateSourceCodeFile(string Name, AppScriptSourceCodeManager.FILE_TYPES F, bool Sync)
+        public static void CreateSourceCodeFile(string Name, AppsScriptSourceCodeManager.FILE_TYPES F, bool Sync)
         {
             try
             {
-                var res = AppScriptSourceCodeManager.AddNewSourceFile(Name, F, Sync).Result;
+                var res = AppsScriptSourceCodeManager.AddNewSourceFile(Name, F, Sync).Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
             }
             catch (Exception ex)
@@ -234,7 +234,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.CreateNewAppsScriptManifestJSONFile().Result;
+                var res = AppsScriptSourceCodeManager.CreateNewAppsScriptManifestJSONFile().Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
             }
             catch (Exception ex)
@@ -247,7 +247,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.CreateVersion(Description).Result;
+                var res = AppsScriptSourceCodeManager.CreateVersion(Description).Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
                 return res.IsSuccess;
             }
@@ -262,7 +262,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.CreateNewVersionAndUpdateDeployment(Description).Result;
+                var res = AppsScriptSourceCodeManager.CreateNewVersionAndUpdateDeployment(Description).Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
                 return res.IsSuccess;
             }
@@ -287,7 +287,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var result = AppScriptSourceCodeManager.ListVersions().Result;
+                var result = AppsScriptSourceCodeManager.ListVersions().Result;
                 if (result.IsSuccess)
                 {
                     versions = result.MyResult;
@@ -311,7 +311,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.UpdateDeploymentVersionNumber(VersionNumber).Result;
+                var res = AppsScriptSourceCodeManager.UpdateDeploymentVersionNumber(VersionNumber).Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
             }
             catch (Exception ex)
@@ -324,7 +324,7 @@ namespace SourceEditorClient
         {
             try
             {
-                var res = AppScriptSourceCodeManager.ClearCredentials().Result;
+                var res = AppsScriptSourceCodeManager.ClearCredentials().Result;
                 printTaskResult(res.ToString(), res.IsSuccess);
             }
             catch (Exception ex)

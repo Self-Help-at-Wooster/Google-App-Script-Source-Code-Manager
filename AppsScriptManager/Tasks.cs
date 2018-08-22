@@ -5,9 +5,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace AppScriptManager
+namespace AppsScriptManager
 {
-    public static partial class AppScriptSourceCodeManager
+    public static partial class AppsScriptSourceCodeManager
     {
         /// <summary>
         /// Clears all current Google resources
